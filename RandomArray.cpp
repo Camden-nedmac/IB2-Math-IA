@@ -1,3 +1,4 @@
+#include "RandomArray.h"
 #include <random>
 using namespace std;
 

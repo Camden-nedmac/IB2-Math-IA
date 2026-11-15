@@ -1,7 +1,9 @@
 #include <iostream>
+#include <vector>
+#include <span>
 #include <random>
-//#include "RandomArray.h"
-//#include "PrintArray.h"
+#include "RandomArray.h"
+#include "PrintArray.h"
 using namespace std;
 
 // Selection sort works by figuratively splitting the main array into two sub-arrays
@@ -29,22 +31,6 @@ void selectionSort(vector<int> &array){
     }
 }
 
-void printArray(vector<int> &array){
-    for(int i : array){cout << i << "-";}
-}
-
-vector<int> generateRandomArray(int size){
-    vector<int> dataset(size); 
-    mt19937 rng(random_device{}()); //seeds the generator
-    uniform_int_distribution<int> distribution(1,size*10);
-
-    //fill array with random values
-    for(int i = 0; i < size; i++){
-        dataset[i] = distribution(rng);
-    }
-
-    return dataset;
-}
 int main(){
 
     int size;
@@ -53,11 +39,10 @@ int main(){
 
     vector<int> array = generateRandomArray(size);
 
-    //printArray(array);
     cout << endl;
     selectionSort(array);
     cout<<"ordered array: ";
     printArray(array);
-
+   
     return 0;
 }
