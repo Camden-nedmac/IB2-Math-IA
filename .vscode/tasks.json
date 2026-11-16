@@ -8,6 +8,7 @@
                 "-fcolor-diagnostics",
                 "-fansi-escape-codes",
                 "-g",
+                "-O2",
                 "-std=c++20",
                 "${file}",
                 "${fileDirname}/RandomArray.cpp",
