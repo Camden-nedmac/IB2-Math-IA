@@ -2,6 +2,7 @@
 #include <vector>
 #include <span>
 #include <random>
+#include <chrono>
 #include "RandomArray.h"
 #include "PrintArray.h"
 using namespace std;
@@ -39,10 +40,12 @@ int main(){
 
     vector<int> array = generateRandomArray(size);
 
-    cout << endl;
     selectionSort(array);
+
+    cout << endl;
     cout<<"ordered array: ";
-    printArray(array);
+
+    printArray(span{array});
    
     return 0;
 }

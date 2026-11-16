@@ -2,6 +2,7 @@
 #include <vector>
 #include <span>
 #include <random>
+#include <chrono>
 #include "RandomArray.h"
 #include "PrintArray.h"
 using namespace std;
@@ -25,14 +26,14 @@ void insertionSort(vector<int> &array){
 int main(){
 
     int size;
-    cout << "Enter array size for instertion sort algorithm: ";
+    cout << "Enter array size for insertion sort algorithm: ";
     cin >> size;
 
     vector<int> array = generateRandomArray(size);
 
     insertionSort(array);
 
-    printArray(std::span{array});
+    printArray(span{array});
 
     return 0;
 }
