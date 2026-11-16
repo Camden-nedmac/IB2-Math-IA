@@ -7,7 +7,10 @@
             "args": [
                 "-fcolor-diagnostics",
                 "-fansi-escape-codes",
-                "${fileDirname}/*.cpp",
+                "-g",
+                "-std=c++20",
+                "${file}",
+                "${fileDirname}/RandomArray.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

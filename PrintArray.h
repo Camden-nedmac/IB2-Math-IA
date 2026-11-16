@@ -1,9 +1,10 @@
 #pragma once
-#include <vector>
+#include <iostream>
 #include <span>
 
-void printArray(std::vector<int> &array){
-    for(int i = 0; i < array.size(); i++){
-        std::cout << array[i] << ", ";
+template <typename T>
+void printArray(std::span<T> arr){
+    for (std::size_t i = 0; i < arr.size(); ++i) {
+        std::cout << arr[i] << ", ";
     }
 }
