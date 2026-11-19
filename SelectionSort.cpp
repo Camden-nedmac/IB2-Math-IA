@@ -40,12 +40,16 @@ int main(){
 
     vector<int> array = generateRandomArray(size);
 
+    // Start timing directly before and after calling the selection sort algorithm
+    auto start = chrono::steady_clock::now();
+
     selectionSort(array);
 
-    cout << endl;
-    cout<<"ordered array: ";
+    // End timer and calculate the difference 
+    auto end = chrono::steady_clock::now();
+    chrono::duration<double, milli> elapsedTime = end - start;
 
-    printArray(span{array});
+    cout << endl << elapsedTime;
    
     return 0;
 }

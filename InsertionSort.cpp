@@ -31,9 +31,14 @@ int main(){
 
     vector<int> array = generateRandomArray(size);
 
+    // Start timing directly before and after calling the selection sort algorithm
+    auto start = chrono::steady_clock::now();
+    
     insertionSort(array);
 
-    printArray(span{array});
+    // End timer and calculate the difference 
+    auto end = chrono::steady_clock::now();
+    chrono::duration<double, milli> elapsedTime = end - start;
 
     return 0;
 }
